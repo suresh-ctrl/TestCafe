@@ -1,0 +1,44 @@
+{
+  "scripts": {
+    "dt": "testcafe chrome tests/Demo/domNodeStateMethods.js --reporter spec",
+    "multiWin": "testcafe chrome tests/Demo/multipleWindows.js --reporter spec",
+    "assert": "testcafe chrome tests/Demo/assertions.js --reporter spec",
+    "dataDriven": "testcafe chrome tests/Demo/dataDrivenMethod.js --reporter spec",
+    "pom": "testcafe chrome tests/Demo/tests/loginTest.js --reporter spec",
+    "excelDriven": "testcafe chrome tests/Demo/dataDrivenExcel.js --reporter spec",
+    "runner": "testcafe chrome tests/Demo/runner --reporter spec",
+    "testA:BrowserSpecific": "testcafe chrome,edge tests/Demo/runner/TestA.js --reporter spec",
+    "testB:AllBrowser": "testcafe all tests/Demo/runner/TestB.js --reporter spec",
+    "testC": "testcafe chrome tests/Demo/runner/TestC.js --reporter spec",
+    "testD": "testcafe chrome tests/Demo/runner/TestD.js --reporter spec",
+    "testD:Concurrency": "testcafe chrome -c 2 tests/Demo/runner/TestD.js --reporter spec",
+    "runner:excelDriven": "testcafe chrome tests/Demo/runner tests/Demo/dataDrivenExcel.js --reporter spec",
+    "testCD": "testcafe chrome tests/Demo/runner/TestC.js && testcafe chrome tests/Demo/runner/TestD.js",
+    "runByTest": "testcafe chrome tests/Demo/runner/*.js -T TestA.*",
+    "runByFixture": "testcafe chrome tests/Demo/runner/*.js -f testB",
+    "runByFixtureMeta": "testcafe chrome tests/Demo/runner/*.js --fixture-meta Reg=Mobile",
+    "runByTestMeta": "testcafe chrome tests/Demo/runner/*.js --test-meta Env=SIT",
+    "runLive": "testcafe chrome tests/Demo/runner/*.js -L",
+    "screenshotEnable": "testcafe chrome tests/Demo/runner/TestA.js -s src/images --skip-js-errors",
+    "screenshotEnableFails": "testcafe chrome tests/Demo/dataDrivenMethod.js -s path=src/images, takeOnFails=true",
+    "screenshotDisable": "testcafe chrome tests/Demo/runner/TestA.js -s path=src/images --disable-screenshots",
+    "videoEnable": "testcafe chrome tests/Demo/runner/TestA.js --video src/videos --skip-js-errors",
+    "videoEnableOptions": "testcafe chrome tests/Demo/dataDrivenMethod.js --video src/videos --video-options failedOnly=true",
+    "testConfig": "testcafe",
+    "htmlReport": "testcafe chrome tests/Demo/dataDrivenMethod.js --reporter html:reports/htmlReports/file.html",
+    "test:Base": "testcafe chrome:headless tests/Demo/visualTestingReg.js -s src/images --take-snapshot base",
+    "testActual": "testcafe chrome:headless tests/Demo/visualTestingReg.js -s src/images --take-snapshot actual"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "chai": "^4.3.7",
+    "ffmpeg": "^0.0.4",
+    "node-xlsx": "^0.21.0",
+    "testcafe": "^2.5.0",
+    "testcafe-reporter-html": "^1.4.6",
+    "testcafe-reporter-spec": "^2.2.0"
+  },
+  "devDependencies": {
+    "testcafe-blink-diff": "^0.5.4"
+  }
+}

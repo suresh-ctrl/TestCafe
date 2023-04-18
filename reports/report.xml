@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite name="TestCafe Tests: Chrome 112.0.0.0 / Windows 10" tests="2" failures="0" skipped="0" errors="0" time="33.422" timestamp="Tue, 18 Apr 2023 13:52:27 GMT" >
+  <testcase classname="My fixture" file="C:\Users\suresh.anandajothi\Documents\TestCafe\tests\Demo\dataDrivenMethod.js" name="My test one -  You logged into a secure area!" time="19.318">
+  </testcase>
+  <testcase classname="My fixture" file="C:\Users\suresh.anandajothi\Documents\TestCafe\tests\Demo\dataDrivenMethod.js" name="My test one -  Your username is invalid!" time="13.526">
+  </testcase>
+</testsuite>
